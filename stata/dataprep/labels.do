@@ -1,0 +1,14 @@
+label define sex 0 `"Females"', modify
+label define sex 1 `"Males"', modify
+label define stage 0 `"Total"', modify
+label define stage 1 `"Localised"', modify
+label define stage 2 `"Regional"', modify
+label define stage 3 `"Distant"', modify
+label define stage 4 `"I"', modify
+label define stage 5 `"II"', modify
+label define stage 6 `"III"', modify
+label define stage 7 `"IV"', modify
+label define stage 8 `"Unknown"', modify
+label define stage 9 `"Non-malignant"', modify
+label define stage 10 `"Malignant"', modify
+label define stage 99 `"Total"', modify
