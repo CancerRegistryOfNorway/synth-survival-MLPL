@@ -11,7 +11,7 @@ The project is used to generate synthetic time-to-event data and evaluate privac
 
 ### Command files are organised depending on their purpose: 
 
-* data preparation [/stata/data_prep](/stata/dataprep)
+* data preparation [/stata/dataprep](/stata/dataprep)
 * synthetic data generation [/stata/generation](/stata/generation)
 * evaluation of *maximum local privacy loss* [/stata/maximum_local_privacy_loss](/stata/maximum_local_privacy_loss)
 * calculation of similarity based privacy metrics [/stata/similarity_based_privacy](/stata/similarity_based_privacy)
