@@ -12,6 +12,9 @@ do "${root}\stata\macros.do"
 do "${root}\stata\settings.do"
 set seed 2
 
+* Illustrative example
+do "${root}\stata\example.do"
+
 * Dataprep
 do "${dataprep}\prep_original_data_${site}.do" 
 
