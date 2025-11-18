@@ -20,19 +20,25 @@ local i = 0
 frames reset
 frame create bires model sim pcd
 
+matrix id = I(4)
+
 foreach mod of local models{
 	forvalues s = 1/$nsim {
 		use "${root}\original_data\original_${site}.dta", clear
 
 		append using "${root}\simulated_data\simulated_`mod'`s'.dta", gen(synth)
-		recode stage (. = 999)
+		recode stage (. = 4) (999 = 4)
 		replace daar = year(diag_date)
 		
-		qui correlate age stage daar sex _t status if synth == 0
-		matrix orig = r(C)
+		qui tab stage, gen(stageN)
 		
-		qui correlate age stage daar sex _t status if synth == 1
+		qui correlate stageN? age daar sex _t status if synth == 0
+		matrix orig = r(C)
+		matrix orig[1, 1] = id
+		
+		qui correlate stageN? age daar sex _t status if synth == 1
 		matrix sim = r(C)
+		matrix sim[1, 1] = id
 	
 		mata PCD("orig","sim")
 		loc pcd = `r(pcd)'
