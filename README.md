@@ -14,9 +14,8 @@ The project is used to generate synthetic time-to-event data and evaluate privac
 * data preparation [/stata/dataprep](/stata/dataprep)
 * synthetic data generation [/stata/generation](/stata/generation)
 * evaluation of *maximum local privacy loss* [/stata/maximum_local_privacy_loss](/stata/maximum_local_privacy_loss)
-* calculation of similarity based privacy metrics [/stata/similarity_based_privacy](/stata/similarity_based_privacy)
 * calculation of utility metrics [/stata/utility](/stata/utility)
-* calculation of XGBoost disctrimination propensity score [/python](/python)
+* calculation of XGBoost disctrimination propensity score, inference attacks, and similarity based privacy metrics [/python](/python)
 
 ### Result files
 
